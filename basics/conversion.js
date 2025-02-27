@@ -25,7 +25,44 @@ console.log(booleanIsLoggedIn) */
 // "xyz"=> true
 
 
-let someNumber= 69
+/* let someNumber= 69
 let StringSomeNumber= String(someNumber)
 console.log(typeof(StringSomeNumber))
-console.log(StringSomeNumber)
+console.log(StringSomeNumber)   */
+
+
+// ********************Operations*********************
+
+let value =3
+let NegValue= -value
+// console.log(NegValue)
+
+// console.log(2+2)
+// console.log(2-2)
+// console.log(2*2.5)
+// console.log(2**3)
+// console.log(2/2)
+// console.log(5%4)
+
+
+let str1= "hello"
+let str2= " Ramesh"
+let str3= str1+str2
+// console.log(str3)
+
+// console.log("1"+2)
+// console.log(1+"2")
+// console.log("1"+"2")
+// console.log("1"+2+2)    //becomes string
+// console.log(1+2+"2")  //becomes  3+"2"
+
+console.log(true)
+console.log(+true)
+console.log(+"")
+
+let gameCounter=100
+gameCounter++
+console.log(gameCounter);
+
+
+
