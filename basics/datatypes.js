@@ -17,7 +17,7 @@ console.log(3+3)
 
 // object
 
-console.log(typeof "ramesh")
+console.log(typeof "ramesh")    //string
 console.log(typeof null)   //object
 console.log(typeof undefined)   //undefined
-console.log(typeof 123)
+console.log(typeof 123)     //number
