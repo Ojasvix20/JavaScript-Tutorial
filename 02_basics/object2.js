@@ -34,7 +34,16 @@ const obj2 = { 4: "d", 5: "e", 6: "f" };
 const obj3 = { ...obj1, ...obj2 };
 // console.log(obj3);
 
-// to return th keys of an object:
+// to return only the keys of an object:
 
 console.log(Object.keys(tinderUser));
 
+// to return only the values of an object:
+console.log(Object.values(tinderUser));
+
+// to return the key-values pair of an object as array:
+console.log(Object.entries(tinderUser));  //vaguely used.
+
+// to check if a key exists
+console.log(tinderUser.hasOwnProperty('email'));
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
