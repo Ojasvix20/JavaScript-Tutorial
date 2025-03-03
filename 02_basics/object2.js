@@ -42,8 +42,44 @@ console.log(Object.keys(tinderUser));
 console.log(Object.values(tinderUser));
 
 // to return the key-values pair of an object as array:
-console.log(Object.entries(tinderUser));  //vaguely used.
+console.log(Object.entries(tinderUser)); //vaguely used.
 
 // to check if a key exists
-console.log(tinderUser.hasOwnProperty('email'));
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+console.log(tinderUser.hasOwnProperty("email"));
+console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+// destructuring objects:
+
+const course = {
+  courseName: "JavaScript Tutorial",
+  price: "999",
+  courseInstructor: "Ramesh",
+};
+
+// course.courseInstructor
+
+// const {courseInstructor} = course;
+// console.log(courseInstructor);
+// const {courseInstructor: Instructor} = course;
+// console.log(Instructor);
+
+/*
+//below is an example of object de-structure in React
+// const navbar=({company})=>{
+
+// }
+// navbar(company= "Google")
+*/
+
+// {
+//   "name": "tunnu"
+//   "courseName":"JavaScript"
+//   "price":"free"
+// }
+// above is an example of JSON
+
+// an object can also be in the form of an array:
+// [{}, {}, {}];
+
+// websites like JSON Formatter can be used for better understanding and simplification of Json code
+// https://jsonformatter.org/
