@@ -1,0 +1,17 @@
+// {} => tells scope
+
+let a = 20; //global scope
+
+if (true) {
+  let a = 900; //local scope within the if condition
+  console.log("Inside function: ", a);
+
+  const b = 12;
+  var c = 45;
+}
+
+console.log("global", a);
+
+// console.log(b); //will give error because b is defined within the if block and cannot be accessed from outside.
+
+// console.log(c); //will print the actual value of c that was declared inside the if condition. this is a special and "bad" case of using "var".... hence we dont use var, instead use let & const (same case if we didnt use any of the options & typed "c=30")
