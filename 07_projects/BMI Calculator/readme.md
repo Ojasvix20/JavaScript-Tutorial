@@ -2,10 +2,15 @@
 
 BMI Calculator using HMTL, CSS, JS
 
-'''javascript
-const form = document.querySelector('form');
+js code:
 
-form.addEventListener("submit", function (e) {
+'''javascript
+
+
+    
+    const form = document.querySelector('form');
+
+    form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const h = parseInt(document.querySelector('#height').value);
