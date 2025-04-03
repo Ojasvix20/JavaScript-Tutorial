@@ -81,16 +81,17 @@ function endGame() {
 }
 
 function newGame() {
-    const newGameButton= document.querySelector('.newGame')
+    const newGameButton = document.querySelector('#newGame'); // Fix the selector
     newGameButton.addEventListener('click', function (e) {
         e.preventDefault();
-        randomNo = (parseInt((Math.random()) * 100 + 1))
-        prevGuess=[]
-        numGuess=11
-        guessSlot=''
-        remaining.innerHTML= ` ${11 - numGuess}`
-        userInput.removeAttribute('disabled')
-        startOver.removeChild('p');        
-        playGame=true;
-    })
+        randomNo = parseInt((Math.random()) * 100 + 1); // Generate new number
+        prevGuess = [];
+        numGuess = 1; // Reset count
+        guessSlot.innerHTML = ''; // Clear previous guesses
+        remaining.innerHTML = ` ${11 - numGuess}`; // Reset remaining guesses
+        userInput.removeAttribute('disabled'); // Enable input
+        startOver.removeChild(p); // Remove the new game button
+        playGame = true;
+    });
 }
+
