@@ -1,4 +1,6 @@
 //older mmethods
+//getters and setters in functions
+
 function User(email, password) {
   this._email = email;
   this._password = password;
@@ -12,4 +14,7 @@ function User(email, password) {
     },
   });
 }
+
+const chai = new User("chai@chai.com", "chai123");
+console.log(chai.email);
 

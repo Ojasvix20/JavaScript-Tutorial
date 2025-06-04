@@ -1,3 +1,5 @@
+//getters & setters in classes
+
 class User {
   constructor(email, password) {
     this.email = email;
