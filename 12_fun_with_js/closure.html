@@ -7,20 +7,73 @@
     <title>Closure</title>
 </head>
 
-<body>
-
+<body style="background-color: black;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
 </body>
 
 <script>
-    function init() {
+    // function init() {
+    //     let name = "Mozilla"
+    //     function displayName() {
+    //         console.log(name);
+
+    //     }
+    //     displayName();
+    // }
+    // init()
+
+    function outer() {
+        let username = "ray"
+        function inner() {
+            console.log("inner", username); //inner fn can access variables of parent function this is called lexical scoping.
+
+            let secret = "my123"
+        }
+        function innerTwo() {
+            console.log("inner two", username);
+            // console.log(secret)//cant acces bcz its not a part of lexical scoping;
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    // console.log("TOO OUTER", username); error due to lexical scoping logics
+
+
+    function makeFunc() {
         let name = "Mozilla"
         function displayName() {
             console.log(name);
+        }
+        return displayName;
+    }
+    const myFunc = makeFunc()
+    myFunc()
+</script>
+
+<script>
+    // document.getElementById("orange").onclick = function () {
+    //     document.body.style.backgroundColor = "orange"
+    // }
+    // document.getElementById("green").onclick = function () {
+    //     document.body.style.backgroundColor = "green"
+    // }   //lets say if we had to make mutliple buttons for 100s of colors it would be dumb to cpyy n paste for every color
+
+    function clickHandler(color) {
+        // document.body.style.backgroundColor = `${color}`
+
+        return function () {
+            document.body.style.backgroundColor = `${color}`
 
         }
-        displayName();
     }
-    init()
+    document.getElementById('orange').onclick = clickHandler("orange");
+    document.getElementById('green').onclick = clickHandler("green");
+
+    //the above is a very basic use case example of closure
 </script>
 
 </html>
+
+<!--LEXICAL SCOPING: basically a child fn can take access of variables from their parent function but not their sibling. nor does the parent have access to child's variables -->
