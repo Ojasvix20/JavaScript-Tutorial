@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+    Hello World
+</body>
+<script>
+    let p = fetch('http://goweather.xyz/weather/Berlin')
+    p.then((response) => {
+        console.log(response.status); //gives the http status code eg.200
+        console.log(response.ok);     //boolean true if status btw 200 - 299
+        return response.json();
+
+    }).then((value2) => {
+        console.log(value2);
+    })
+</script>
+
+</html>
